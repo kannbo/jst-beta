@@ -1,0 +1,24 @@
+{
+  "name": "jstベータ版",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "Js tool listのベータ版スクリプトです",
+  "background":
+    {
+      "service_worker": "script.js"
+    },
+  "action": {
+    "default_popup": "home.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://jst.iinaa.net/"],
+    "js": [
+      "javascript/content.js"
+    ]
+  },{
+    "matches": ["https://jst.iinaa.net/omoshiro/HTML.htm"],
+    "js": [
+      "javascript/content2.js"
+    ]
+  }]
+}
